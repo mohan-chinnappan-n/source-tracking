@@ -1,4 +1,28 @@
-# Source Tracking
+
+# Admin friendly DevOps 
+-  Admins not familiar with VCS
+
+## Salesforce DevOps Center
+
+![doc](img/doc-1.png)
+
+### Video
+[DevOps Center](https://www.youtube.com/watch?v=NN5C--S6ei4)
+
+
+## DevOps Center vs Change-Sets
+- ![doc vs cs](img/Salesforce-DevOps-Center.jpg)
+
+### Release plan
+- Beta
+	- Summer 22
+- Data Model
+
+
+
+## Use of Source Tracking
+
+### Demo
 
 ```
 sfdx force:org:create -s -f config/project-scratch-def.json -a st -v mohan.chinnappan.n_ea2@gmail.com
@@ -157,4 +181,31 @@ Waiting to resolve the Lightning Experience-enabled custom domain...... done
         "IsNewMember": false
     }
 ]
+```
+
+## Pull the source changes from org to local
+
+```
+sfdx force:source:status -u st
+Source Status
+STATE       FULL NAME                           TYPE    PROJECT PATH
+──────────  ──────────────────────────────────  ──────  ────────────
+Remote Add  Account-Account (Marketing) Layout  Layout
+Remote Add  Account-Account (Sales) Layout      Layout
+Remote Add  Account-Account (Support) Layout    Layout
+
+```
+
+```
+sfdx force:source:pull -u st
+Updating source tracking... done
+=== Retrieved Source
+STATE    FULL NAME                               TYPE         PROJECT PATH
+───────  ──────────────────────────────────────  ───────────  ─────────────────────────────────────────────────────────────────────────────────────
+Created  Account.Carbon_Neutral__c               CustomField  force-app/main/default/objects/Account/fields/Carbon_Neutral__c.field-meta.xml
+Created  Account-Account %28Marketing%29 Layout  Layout       force-app/main/default/layouts/Account-Account %28Marketing%29 Layout.layout-meta.xml
+Created  Account-Account %28Sales%29 Layout      Layout       force-app/main/default/layouts/Account-Account %28Sales%29 Layout.layout-meta.xml
+Created  Account-Account %28Support%29 Layout    Layout       force-app/main/default/layouts/Account-Account %28Support%29 Layout.layout-meta.xml
+Created  Account-Account Layout                  Layout       force-app/main/default/layouts/Account-Account Layout.layout-meta.xml
+Created  Admin                                   Profile      force-app/main/default/profiles/Admin.profile-meta.xml
 ```
