@@ -6,6 +6,13 @@
 
 ![doc](img/doc-1.png)
 
+### Docs
+![Quip Doc: DevOps Center FAQ](https://salesforce.quip.com/9acRAAfljeyp)
+![Why the New DevOps Center in Salesforce Is Awesome for Admins](https://admin.salesforce.com/blog/2020/new-devops-center-is-awesome-for-admins)
+
+### Twitter
+- [@KarenFidelak](https://twitter.com/karenfidelak)
+
 ### Video
 [DevOps Center](https://www.youtube.com/watch?v=NN5C--S6ei4)
 
